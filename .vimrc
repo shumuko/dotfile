@@ -31,8 +31,11 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'bling/vim-airline'
 
 " All of your Plugins must be added before the following line
-call vundle#end()            
-filetype plugin indent on    
+call vundle#end()
+filetype plugin indent on
+
+" Force 256 color
+set t_Co=256
 
 " For custom mappings
 let mapleader = ","
@@ -70,8 +73,12 @@ set backspace=indent,eol,start
 
 set nofoldenable    " disable folding
 
-" Strip trailing whitespace
-"autocmd BufWritePre * :%s/\s\+$//e
+" Strip trailing whitespace when saving a file
+autocmd BufWritePre * :%s/\s\+$//e
+
+" "Remove trailing space
+"nnoremap <Leader>rtw :%s/\s\+$//e<CR>
+
 
 " recognize Capfile, Gemfile, treetop
 autocmd BufRead,BufNewFile *.ru set filetype=ruby
@@ -94,6 +101,7 @@ imap <D-Return> <ESC>o
 imap <C-D> <DEL>
 
 " Symbols and strings
+syntax on
 nmap <leader>: ds"i:<Esc>e
 nmap <leader>" bhxcsw"
 
@@ -115,7 +123,7 @@ nmap <C-k> <C-u>
 
 " Use ctrl-[hjkl] to select the active split!
 nmap <silent> <c-k> <C-W>k
-nmap <silent> <c-j> <C-W>j 
+nmap <silent> <c-j> <C-W>j
 nmap <silent> <c-h> <C-W>h
 nmap <silent> <c-l> <C-W>l
 
@@ -245,3 +253,14 @@ set statusline=%<\ %n:%f\ %m%r%y%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%)
 if has('gui_running')
   colorscheme solarized
 endif
+
+" Change cursor shape between insert and normal mode in iTerm2.app
+ if $TERM_PROGRAM =~ "iTerm"
+   let &t_SI = "\<Esc>]50;CursorShape=1\x7" " Vertical bar in insert mode
+   let &t_EI = "\<Esc>]50;CursorShape=0\x7" " Block in normal mode
+ endif
+
+" Airline
+let g:airline_theme='solarized'
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
