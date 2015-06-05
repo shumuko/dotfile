@@ -30,6 +30,8 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'kien/ctrlp.vim'
 Plugin 'bling/vim-airline'
 Plugin 'flazz/vim-colorschemes'
+Plugin 'mxw/vim-jsx'
+Plugin 'pangloss/vim-javascript'
 
 " All of your Plugins must be added before the following line
 call vundle#end()
@@ -265,3 +267,6 @@ endif
 let g:airline_theme='solarized'
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
+
+" Allow JSX in normal JS files
+let g:jsx_ext_required = 0
