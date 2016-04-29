@@ -32,6 +32,8 @@ Plugin 'bling/vim-airline'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'mxw/vim-jsx'
 Plugin 'pangloss/vim-javascript'
+Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'Emmet.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()
