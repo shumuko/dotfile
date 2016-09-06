@@ -33,3 +33,5 @@ alias ll='ls -la'
 alias gru='git remote update'
 alias co='checkout'
 
+### Oplop
+export HISTIGNORE="&:[ ]*:exit:oplop*"
