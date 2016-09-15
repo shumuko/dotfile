@@ -1,0 +1,19 @@
+# top-most EditorConfig file
+root = true
+
+[*]
+charset = utf-8
+trim_trailing_whitespace = true
+end_of_line = lf
+insert_final_newline = true
+continuation_indent_size = 2
+indent_size = 2
+
+[*.md]
+trim_trailing_whitespace = false
+
+[**.scss]
+
+[**.js]
+
+[src/**.json]
