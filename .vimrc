@@ -50,7 +50,7 @@ set wrap
 
 " Highlight the line the cursor is on
 set cursorline
-hi CursorLine cterm=NONE ctermbg=256 ctermfg=NONE guibg=256 guifg=NONE
+" hi CursorLine cterm=NONE ctermbg=LightBlue ctermfg=NONE guibg=LightBlue guifg=NONE
 
 " Show possible command line completions
 set wildmenu
