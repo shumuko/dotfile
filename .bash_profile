@@ -40,9 +40,6 @@ test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shel
 ### Oplop
 export HISTIGNORE="&:[ ]*:exit:oplop*"
 
-### Autodesk for Artifactory to work over VPN
-export BUNDLE_ARTIFACTORY__ADSKENGINEER__NET="bim360cif:J%23CKGs_peagz48%2F%26"
-
 ### Rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
