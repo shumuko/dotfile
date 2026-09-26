@@ -18,4 +18,5 @@ Follow [README.md](../../../README.md) at the repo root. Do not invent extra too
 - Back up an existing `~/.zshrc` or `~/.bash_profile` before replacing it with a symlink.
 - `.zshrc` expects Java 25. `.bash_profile` expects Java 21. Install the JDK for the shell in use.
 - `git-completion.bash` must be linked to `$HOME/git-completion.bash`, not only left inside the repo.
-- Stop after the README checks pass, and say which optional pieces (SDKMAN, iTerm2, bash as login shell) were skipped.
+- Match this Mac’s iTerm look by linking `iterm/Solarized-Dark.json` into `~/Library/Application Support/iTerm2/DynamicProfiles/` and setting the **Solarized Dark** profile as the default. Prompt colors come from the shell profiles, so those symlinks are required too.
+- Stop after the README checks pass, and say which optional pieces (SDKMAN, bash as login shell) were skipped.

@@ -10,6 +10,7 @@ Shell and editor config for a new Mac. These files contain no tokens, emails, or
 | `git-completion.bash` | Git tab completion for bash. The profile sources `~/git-completion.bash` |
 | `.vimrc` | Vim |
 | `.editorconfig` | Editor defaults (UTF-8, LF, 2-space indent) |
+| `iterm/Solarized-Dark.json` | iTerm2 dynamic profile: Solarized Dark, Monaco 12 |
 
 ## Prerequisites
 
@@ -79,11 +80,23 @@ Install `openjdk@25` as well if you use zsh. Follow the `brew info` caveats so `
 curl -s "https://get.sdkman.io" | bash
 ```
 
-### 6. iTerm2 (optional)
+### 6. iTerm2
 
 ```bash
 brew install --cask iterm2
 ```
+
+This Mac’s default iTerm profile is **Solarized Dark**, font **Monaco 12**, 80×25, no transparency, no blur, bold and italic on, cursor not blinking. The shell prompt colors (yellow name, cyan path, git branch) come from `.zshrc` and `.bash_profile`, not from iTerm.
+
+Load the same profile:
+
+```bash
+mkdir -p "$HOME/Library/Application Support/iTerm2/DynamicProfiles"
+ln -sfn "$HOME/dotfile/iterm/Solarized-Dark.json" \
+  "$HOME/Library/Application Support/iTerm2/DynamicProfiles/Solarized-Dark.json"
+```
+
+Quit and reopen iTerm. In **Settings → Profiles**, select **Solarized Dark**, open **Other Actions**, and choose **Set as Default**.
 
 In iTerm: **Settings → General → Magic → Install Shell Integration**.
 
