@@ -92,3 +92,6 @@ export JAVA_HOME=$(/usr/libexec/java_home -v 21)
 export PATH="$JAVA_HOME/bin:$PATH"
 
 export PATH="$HOME/.local/bin:$PATH"
+
+# Optional local secrets. Never commit this file.
+[[ -s "$HOME/.secrets" ]] && source "$HOME/.secrets"
